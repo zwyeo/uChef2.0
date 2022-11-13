@@ -222,6 +222,28 @@ export default createStore({
       });
     },
 
+    getCommunityRecipeByCategory({ commit }) {
+      const url =
+        "https://wad-proj-22042-default-rtdb.asia-southeast1.firebasedatabase.app/community.json";
+
+      axios.get(url).then((res) => {
+        let commrecipes = [];
+        let userQuery = this.state.queryParam;
+        const category = this.state.selectedCategory;
+        const data = res.data;
+
+        for (let recipeObj in data) {
+          let cat = data[recipeObj].category.toLowerCase();
+          if (cat === category) {
+            commrecipes.push(data[recipeObj]);
+          }
+        }
+        this.state.commsearched = true;
+        commit("getCommRecipes", commrecipes);
+        console.log("THIS", this.state.commsearchrecipes);
+      });
+    },
+
     // TO BE REPLACEEDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
     filterCategory({ commit }) {
       //if search query is empty
