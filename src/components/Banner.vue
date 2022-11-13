@@ -31,6 +31,18 @@
         data-bs-slide-to="3"
         aria-label="Slide 4"
       ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="4"
+        aria-label="Slide 5"
+      ></button>
+      <button
+        type="button"
+        data-bs-target="#carouselExampleCaptions"
+        data-bs-slide-to="5"
+        aria-label="Slide 6"
+      ></button>
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active" data-bs-interval="2000">
@@ -96,7 +108,7 @@
 
       <div class="carousel-item" data-bs-interval="2000">
         <img
-          src="../assets/img/banner-img/fish-category.jpg"
+          src="../assets/img/banner-img/pork-category.jpg"
           class="d-block w-100"
           alt="..."
           style="height: 800px; object-fit: cover"
@@ -107,17 +119,78 @@
           <h2
             class="animate__animated animate__fadeInUp animate__delay-4 animate__slower"
           >
-            Fish
+            Pork
           </h2>
           <p
             class="animate__animated animate__fadeInUp animate__delay-5 animate__slower carousel-text"
           >
-            Fish are full of Omega-3 fatty acids. Salmon, tuna, trout and
-            herring are all fish with high levels of Omega-3. This is considered
-            the good fat and can actually be very healthy to your heart.
+            Pork is a high-protein food and contains varying amounts of fats. To
+            enjoy the healthiest pork benefits, it’s recommended to prioritize
+            lean cuts – tenderloin, loin chops and sirloin roast. Lean cuts of
+            pork are not just high in protein and lower in fat, but also contain
+            more B-vitamins than many more other types of meat.
           </p>
-          <button class="text-btn" @click="searchCategory('fish')">
-            See Fish Category
+          <button class="text-btn" @click="searchCategory('pork')">
+            See Pork Category
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img
+          src="../assets/img/banner-img/pasta-category.jpg"
+          class="d-block w-100"
+          alt="..."
+          style="height: 800px; object-fit: cover"
+        />
+        <div
+          class="carousel-caption d-none d-md-block animate__animated animate__fadeInUp animate__delay-2 animate__slow carousel-label"
+        >
+          <h2
+            class="animate__animated animate__fadeInUp animate__delay-4 animate__slower"
+          >
+            Pasta
+          </h2>
+          <p
+            class="animate__animated animate__fadeInUp animate__delay-5 animate__slower carousel-text"
+          >
+            Pasta is a good source of carbohydrates. It also contains protein.
+            Carbohydrates help fuel your body by providing energy that is
+            released slowly over time. One cup of cooked spaghetti provides
+            about 200 calories, 40 grams of carbohydrates, less than one gram of
+            total fat, no cholesterol and only one gram of sodium when cooked
+            without salt.
+          </p>
+          <button class="text-btn" @click="searchCategory('Pasta')">
+            See Pasta Category
+          </button>
+        </div>
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img
+          src="../assets/img/banner-img/vegetarian-category.jpg"
+          class="d-block w-100"
+          alt="..."
+          style="height: 800px; object-fit: cover"
+        />
+        <div
+          class="carousel-caption d-none d-md-block animate__animated animate__fadeInUp animate__delay-2 animate__slow carousel-label"
+        >
+          <h2
+            class="animate__animated animate__fadeInUp animate__delay-4 animate__slower"
+          >
+            Vegetarian
+          </h2>
+          <p
+            class="animate__animated animate__fadeInUp animate__delay-5 animate__slower carousel-text"
+          >
+            Vegetarian diets are naturally low in saturated fat and cholesterol,
+            and high in fiber, which may help to prevent heart disease,
+            diabetes, kidney stones, and some cancers. Large studies even
+            suggest that vegetarians have a 40% lower risk of developing cancer
+            compared to meat eaters.
+          </p>
+          <button class="text-btn" @click="searchCategory('vegetarian')">
+            See Vegetarian Category
           </button>
         </div>
       </div>
