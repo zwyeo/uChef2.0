@@ -15,7 +15,7 @@
   </div>
 
   <!-- Receipe Content Area -->
-  <div class="">
+  <div>
     <div class="container">
       <div class="row">
         <div class="col-12 col-md-8">
@@ -120,14 +120,18 @@
         </div>
       </div>
 
+      <!-- Instructions -->
       <div class="row">
         <div class="col-12 col-lg-9 animate__animated animate__backInUp animate__delay-1s animate__fast">
           <!-- Single Preparation Step -->
-          <div v-for="(item, index) in instructions" :key="item" class="single-preparation-step d-flex">
-            <h4 v-if="index < 9">0{{ index + 1 }}</h4>
-            <h4 v-else>{{ index + 1 }}</h4>
-            <p>{{ item }}</p>
-          </div>
+          <ul class="list-group list-group-light">
+            <li v-for="(item, index) in instructions" :key="item"
+              class="list-group-item px-3 border-0 rounded-3 list-group-item-light mb-2 d-flex">
+              <h4 v-if="index < 9">0{{ index + 1 }}</h4>
+              <h4 v-else>{{ index + 1 }}</h4>
+              <p class="ms-3">{{ item }}</p>
+            </li>
+          </ul>
         </div>
 
         <!-- Ingredients -->
@@ -136,7 +140,7 @@
 
           <!-- Ingredient list -->
           <div v-for="(item, index) in ingredient_list" :key="index" :id="index">
-            <ul class="list-group text-white">
+            <ul class="list-group text-white ingredient-group">
               <li class="list-group-item d-flex justify-content-between align-content-center">
                 <h6 class="mb-0">
                   <img src="../assets/img/core-img/salad.png" class="ingredient-img" />
@@ -852,7 +856,7 @@ svg {
 }
 
 /* Ingredient list */
-.list-group {
+.ingredient-group {
   width: 300px !important;
 }
 
