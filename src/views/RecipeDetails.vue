@@ -79,6 +79,9 @@
               </div>
             </div>
             <!-- END of v-if-->
+            <div v-else>
+              <button class="btn video-btn disabled">No Video Available</button>
+            </div>
           </div>
         </div>
 
@@ -408,17 +411,22 @@ export default {
           },
         })
         .then((response) => {
-          // console.log(response.data);
+          console.log(response.data);
           let obj = response.data.meals[0];
           this.title = obj.strMeal;
           this.image = obj.strMealThumb;
           this.foodCategory = obj.strCategory;
+          console.log(obj.strYoutube)
+          if (obj.strYoutube === "") {
+            this.videoExist = false;
+            console.log(this.videoExist)
+          }
           this.video = obj.strYoutube.replace("watch?v=", "embed/");
 
           //formatting instructions
           let instruction = obj.strInstructions.split("\r\n");
           for (let i of instruction) {
-            if (!i == "") {
+            if (!i == "" && i.length > 1) {
               this.instructions.push(i);
             }
           }
