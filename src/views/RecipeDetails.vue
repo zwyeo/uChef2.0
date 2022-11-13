@@ -4,7 +4,7 @@
   </div>
   <!-- Receipe Slider -->
   <div class="container animate__animated animate__backInLeft animate__fast">
-    <div class="row">
+    <div class="row mb-5">
       <div class="col-12">
         <div class="parent">
           <div
