@@ -141,9 +141,8 @@ export default {
         .then((userCredential) => {
           // Signed in
           const user = userCredential.user;
-          console.log("THISSSS");
-          console.log(user);
-          console.log(this.name);
+          // console.log(user);
+          // console.log(this.name);
           updateProfile(user, { displayName: this.name });
 
           this.$store.commit("set_userName", user.displayName);

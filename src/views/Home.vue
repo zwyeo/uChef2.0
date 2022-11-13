@@ -31,7 +31,7 @@
     </div>
 
     <!-- POPULAR RECIPE SECTION -->
-    <h2 class="text-center p-5">The Most Popular Recipes</h2>
+    <h2 class="text-center p-5">Recommended By uChef</h2>
     <div class="row d-flex justify-content-center">
       <div
         v-for="recipe in $store.state.popularRecipe"
