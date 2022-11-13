@@ -100,4 +100,8 @@ export default {
   font-size: 24px;
   line-height: 1.33;
 }
+
+a {
+  text-decoration: none;
+}
 </style>
