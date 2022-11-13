@@ -139,7 +139,7 @@
             style="color: #b6b6b6"
           >
             <i class="fa fa-user-plus"></i>
-            <span> LOGIN</span>
+            <span> LOGIN <br> / SIGN UP</span>
           </div>
 
           <!-- PROFILE IF GUEST -->
@@ -161,7 +161,7 @@
             data-bs-toggle="modal"
             data-bs-target="#logoutModal"
             class="search-btn login-style ps-5 pt-2"
-            style="color: #b6b6b6"
+            style="color: #b6b6b6; bottom: 4.75rem;"
           >
             <i class="fa fa-rotate-right"></i>
             <span> LOGOUT</span>
@@ -314,8 +314,7 @@ export default {
         .then(() => {
           this.$store.state.userId = null;
           this.$store.state.userName = null;
-          this.$router.push("/");
-          location.reload();
+          window.location.assign("/");
         })
         .catch((err) => console.log(err));
     },
@@ -398,7 +397,7 @@ a {
   .login-style {
     position: absolute;
     right: 5rem;
-    bottom: 4.75rem;
+    bottom: 4rem;
     margin-top: 0.5rem;
     margin-right: 2rem;
   }
