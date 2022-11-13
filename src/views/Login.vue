@@ -159,7 +159,4 @@ export default {
   padding: relative;
   top: -3px;
 }
-
-.nav-style {
-}
 </style>
