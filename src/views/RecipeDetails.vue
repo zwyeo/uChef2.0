@@ -129,7 +129,7 @@
               class="list-group-item px-3 border-0 rounded-3 list-group-item-light mb-2 d-flex">
               <h4 v-if="index < 9">0{{ index + 1 }}</h4>
               <h4 v-else>{{ index + 1 }}</h4>
-              <p class="ms-3">{{ item }}</p>
+              <p class="ms-3 instruction-text">{{ item }}</p>
             </li>
           </ul>
         </div>
@@ -510,11 +510,6 @@ export default {
 <!-- CSS files
   ============== -->
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -594,10 +589,6 @@ ol li {
   background-position: center;
 }
 
-/* Spacing */
-.mt-30 {
-  margin-top: 30px !important;
-}
 
 /* Section Heading */
 .section-heading {
@@ -815,17 +806,17 @@ svg {
   }
 }
 
-.receipe-headline .receipe-duration {
+.receipe-headline {
   border-left: 3px solid #40ba37;
   padding: 15px;
 }
 
-.receipe-headline .receipe-duration h6 {
+.receipe-headline {
   font-size: 15px;
   margin-bottom: 5px;
 }
 
-.receipe-headline .receipe-duration h6:last-child {
+.receipe-headline {
   margin-bottom: 0;
 }
 
@@ -839,21 +830,10 @@ svg {
   padding: 0 3px;
 }
 
-.single-preparation-step {
-  position: relative;
-  z-index: 1;
-  margin-bottom: 50px;
+.instruction-text {
+  font-size: 20px;
 }
 
-.single-preparation-step h4 {
-  color: #474747;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 60px;
-  flex: 0 0 60px;
-  max-width: 60px;
-  width: 60px;
-  margin-bottom: 0;
-}
 
 /* Ingredient list */
 .ingredient-group {
@@ -873,10 +853,6 @@ svg {
   transform: scaleX(1.1);
 }
 
-.check {
-  opacity: 0;
-  transition: all 0.6s ease-in-out;
-}
 
 .list-group-item:hover .check {
   opacity: 1;
@@ -893,48 +869,6 @@ svg {
   left: 80px;
 }
 
-input[type="checkbox"] {
-  position: relative;
-  cursor: pointer;
-}
-
-input[type="checkbox"]:before {
-  content: "";
-  display: block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  top: 0px;
-  left: 0;
-  border: 1px solid #10a3f9;
-  border-radius: 3px;
-  background-color: white;
-}
-
-input[type="checkbox"]:checked:after {
-  content: "";
-  display: block;
-  width: 7px;
-  height: 12px;
-  border: solid #007bff;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-  position: absolute;
-  top: 2px;
-  left: 6px;
-}
-
-input[type="checkbox"]:checked+.check {
-  opacity: 1;
-}
-
-/*food image  */
-.fancy-border {
-  border: 25px solid #b88846;
-  border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='75' height='75'%3E%3Cg fill='none' stroke='%23B88846' stroke-width='2'%3E%3Cpath d='M1 1h73v73H1z'/%3E%3Cpath d='M8 8h59v59H8z'/%3E%3Cpath d='M8 8h16v16H8zM51 8h16v16H51zM51 51h16v16H51zM8 51h16v16H8z'/%3E%3C/g%3E%3Cg fill='%23B88846'%3E%3Ccircle cx='16' cy='16' r='2'/%3E%3Ccircle cx='59' cy='16' r='2'/%3E%3Ccircle cx='59' cy='59' r='2'/%3E%3Ccircle cx='16' cy='59' r='2'/%3E%3C/g%3E%3C/svg%3E") 25;
-}
 
 /* Video Modal */
 .modal-dialog {
@@ -951,32 +885,5 @@ input[type="checkbox"]:checked+.check {
   position: absolute;
   right: -30px;
   top: 0;
-}
-
-/* Comment form */
-.contact-form-area .form-control {
-  height: 52px;
-  width: 100%;
-  background-color: #f3f5f8;
-  font-size: 12px;
-  font-style: italic;
-  margin-bottom: 15px;
-  border: none;
-  border-left: 3px solid #f3f5f8;
-  border-radius: 0;
-  padding: 15px 30px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
-}
-
-.contact-form-area .form-control:focus {
-  border-left: 3px solid #40ba37;
-  box-shadow: none;
-}
-
-.contact-form-area textarea.form-control {
-  height: 200px;
-  -webkit-transition-duration: 500ms;
-  transition-duration: 500ms;
 }
 </style>
