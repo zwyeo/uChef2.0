@@ -13,6 +13,13 @@ However, in the event where you will need to run it locally, simply run the foll
 ```
 npm run serve
 ```
+
+In either case, please use the following login credentials for testing:
+```
+Login: testuser1@gmail.com
+Password: test123
+```
+
 Do not type in index.html into the address bar as it will not work. Just use the address given in the terminal as the root is being intercepted by our App.vue.
 To terminate your session, simply press Ctrl + C on your terminal.
 
