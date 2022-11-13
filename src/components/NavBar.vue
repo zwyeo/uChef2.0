@@ -315,6 +315,7 @@ export default {
           this.$store.state.userId = null;
           this.$store.state.userName = null;
           this.$router.push("/");
+          location.reload();
         })
         .catch((err) => console.log(err));
     },

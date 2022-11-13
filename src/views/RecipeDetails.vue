@@ -139,22 +139,27 @@
           <h4 class="">Ingredients</h4>
 
           <!-- Ingredient list -->
-          <div v-for="(item, index) in ingredient_list" :key="index" :id="index">
+          <<<<<<< HEAD <div v-for="(item, index) in ingredient_list" :key="index" :id="index">
             <ul class="list-group text-white ingredient-group">
               <li class="list-group-item d-flex justify-content-between align-content-center">
-                <h6 class="mb-0">
-                  <img src="../assets/img/core-img/salad.png" class="ingredient-img" />
-                  &nbsp;<span class="item">{{ item }}</span>
-                </h6>
-              </li>
-            </ul>
+                =======
+                <div v-for="(item, index) in ingredient_list" :key="index" :id="index">
+                  <ul class="list-group text-white">
+                    <li class="list-group-item d-flex justify-content-between align-content-center">
+                      >>>>>>> b2d109c91b13122cc43f9144da686ff8f43a11a9
+                      <h6 class="mb-0">
+                        <img src="../assets/img/core-img/salad.png" class="ingredient-img" />
+                        &nbsp;<span class="item">{{ item }}</span>
+                      </h6>
+                    </li>
+                  </ul>
 
-            <!-- End of ingredient list -->
-          </div>
+                  <!-- End of ingredient list -->
+                </div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row pb-5">
         <div class="col-12">
           <div
             class="section-heading text-left m-0 animate__animated animate__fadeInBottomLeft animate__delay-1s animate__fast"
