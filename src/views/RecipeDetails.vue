@@ -52,6 +52,9 @@
               </div>
             </div>
             <!-- END of v-if-->
+            <div v-else>
+              <button class="btn video-btn disabled">No Video Available</button>
+            </div>
           </div>
         </div>
 
@@ -308,17 +311,22 @@ export default {
           },
         })
         .then((response) => {
-          // console.log(response.data);
+          console.log(response.data);
           let obj = response.data.meals[0];
           this.title = obj.strMeal;
           this.image = obj.strMealThumb;
           this.foodCategory = obj.strCategory;
+          console.log(obj.strYoutube)
+          if (obj.strYoutube === "") {
+            this.videoExist = false;
+            console.log(this.videoExist)
+          }
           this.video = obj.strYoutube.replace("watch?v=", "embed/");
 
           //formatting instructions
           let instruction = obj.strInstructions.split("\r\n");
           for (let i of instruction) {
-            if (!i == "") {
+            if (!i == "" && i.length > 1) {
               this.instructions.push(i);
             }
           }
@@ -421,27 +429,27 @@ export default {
         var str_id = null;
 
         axios
-        .get(
-          `https://wad-proj-22042-default-rtdb.asia-southeast1.firebasedatabase.app/users/${this.$store.state.userId}/preferences.json`
-        )
-        .then((response) => {
-          console.log(response.data);
-          for (let bookmark in response.data) {
-            str_id = bookmark;
-            current = response.data[bookmark][this.foodCategory];
-            console.log(current);
-          }
-          var final = current + 1;
+          .get(
+            `https://wad-proj-22042-default-rtdb.asia-southeast1.firebasedatabase.app/users/${this.$store.state.userId}/preferences.json`
+          )
+          .then((response) => {
+            console.log(response.data);
+            for (let bookmark in response.data) {
+              str_id = bookmark;
+              current = response.data[bookmark][this.foodCategory];
+              console.log(current);
+            }
+            var final = current + 1;
 
-          const db = getDatabase();
-          set(
-            ref(
-              db,
-              `users/${this.$store.state.userId}/preferences/${str_id}/${this.foodCategory}`
-            ),
-            final
-          );
-        });
+            const db = getDatabase();
+            set(
+              ref(
+                db,
+                `users/${this.$store.state.userId}/preferences/${str_id}/${this.foodCategory}`
+              ),
+              final
+            );
+          });
       }
     },
     unbookmark() {
