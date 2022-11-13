@@ -41,27 +41,6 @@
         aria-labelledby="tab-login"
       >
         <form>
-          <!-- <div class="text-center mb-3">
-            <p>Sign in with:</p>
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-facebook-f"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-google"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-twitter"></i>
-            </button>
-
-            <button type="button" class="btn btn-link btn-floating mx-1">
-              <i class="fab fa-github"></i>
-            </button>
-          </div>
-
-          <p class="text-center">or:</p> -->
-
           <!-- Name input -->
           <div class="form-outline mb-4">
             <input
